@@ -8,6 +8,7 @@
 body{
   background:#0b1220;
   color:white;
+  scroll-behavior:smooth;
 }
 
 /* HERO */
@@ -19,7 +20,6 @@ header{
 
   background-size:cover;
   background-position:center;
-
   display:flex;
   justify-content:center;
   align-items:center;
@@ -31,7 +31,7 @@ header{
   animation:fadeIn 1.5s ease;
 }
 
-/* 🌙 CIRCLE LOGO */
+/* LOGO */
 .logo{
   width:110px;
   height:110px;
@@ -40,9 +40,10 @@ header{
   border:3px solid #60a5fa;
   margin-bottom:15px;
   box-shadow:0 0 20px rgba(96,165,250,0.4);
+  background:white;
 }
 
-/* TITLE */
+/* TEXT */
 .hero h1{
   font-size:60px;
   letter-spacing:2px;
@@ -62,6 +63,7 @@ header{
   text-decoration:none;
   border-radius:25px;
   transition:0.3s;
+  display:inline-block;
 }
 
 .btn:hover{
@@ -87,7 +89,7 @@ h2{
   line-height:1.8;
 }
 
-/* MENU */
+/* MENU GRID */
 .menu{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -101,11 +103,11 @@ h2{
   border-radius:18px;
   overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,0.4);
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
 }
 
 .card img{
@@ -125,6 +127,7 @@ h2{
   padding:0 10px;
 }
 
+/* PRICE */
 .price{
   display:inline-block;
   margin:15px 0 20px;
@@ -132,6 +135,18 @@ h2{
   background:#3b82f6;
   border-radius:20px;
   font-size:14px;
+}
+
+/* CONTACT BOX (ADDED IMPROVEMENT) */
+.contact-box{
+  margin:auto;
+  max-width:500px;
+  background:#111827;
+  padding:25px;
+  border-radius:15px;
+  line-height:2;
+  color:#cbd5e1;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -146,4 +161,15 @@ footer{
 @keyframes fadeIn{
   from{opacity:0; transform:translateY(20px);}
   to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .hero h1{
+    font-size:38px;
+  }
+
+  h2{
+    font-size:28px;
+  }
 }
